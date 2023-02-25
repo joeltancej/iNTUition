@@ -1,0 +1,21 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Home page</title>
+    </head>
+    <body>
+        <h1>Home Page!</h1>
+        <!--is a placeholder -->
+        <p>{{content}}</p>
+        <p>{{r}}</p>
+        <!-- allows us to write python code -->
+        {% for x in range (10) %}
+            {% if x % 2 == 1 %}
+            <p>{{x}}</p>
+            {% endif %}
+        {% endfor %}
+        {% for y in content_1 %}
+            <p>{{y}}</p>
+        {% endfor %}
+    </body>
+</html>
