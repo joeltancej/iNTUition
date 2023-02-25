@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     #return inline html
-    return "BABY! This is the main page <h1>BABY<h1>"
+    return "This is the main page <h1>Hello<h1>"
 
 #passing value to function as a parameter
 @app.route("/<name>")
