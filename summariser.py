@@ -3,6 +3,7 @@
 # 3. Calculate sentence weight by summarizing weight per word
 # 4. Find sentences with the highest weight
 # 5. Place these sentences in their original order
+#testtt
 
 from nltk import tokenize, word_tokenize
 import nltk
