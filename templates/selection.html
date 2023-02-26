@@ -2,5 +2,33 @@
 {% block title  %}Selection{% endblock %}
 {% block content %}
     <h1>Selection Page</h1>
-    <p>{{name}} successfully uploaded!</p>
+    <!-- to get flashed messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <!-- <p>{{name}} successfully uploaded!</p> -->
+    <p>{{summary}}</p>
+    <p></p>
+    <!-- <form method="POST" action="selection" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Upload Research Article:</label>
+          <input type="file" class="form-control-file" name="file" required>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Upload">
+      </form> -->
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Present
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="/">Definitions</a>
+          <a class="dropdown-item" href="#">Thought Cloud</a>
+          <a class="dropdown-item" href="#">Summary</a>
+        </div>
+      </div>
 {% endblock %}

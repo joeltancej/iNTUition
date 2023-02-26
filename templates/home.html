@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 {% block title  %}Home{% endblock %}
 {% block content %}
+<!-- to get flashed messages -->
     <h1>Research Article Summary Tool</h1>
-        <form method="POST" action="selection" enctype="multipart/form-data">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for msg in messages %}
+            <p>{{msg}}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+        <form method="POST" action="#" enctype="multipart/form-data">
           <div class="form-group">
             <label for="exampleFormControlFile1">Upload Research Article:</label>
             <input type="file" class="form-control-file" name="file" required>

@@ -7,7 +7,7 @@
 
 from nltk import tokenize, word_tokenize
 import nltk
-nltk.download('punkt')
+# nltk.download('punkt')
 
 with open("stopwords.txt", "r", encoding="utf-8") as f:
      text = " ".join(f.readlines())
@@ -35,14 +35,12 @@ def summarize(text, no_sentences=3):
     summary=""
     for sentence,strength in sentence_weights.items():  
         if strength in highest_weights:
-            print(strength)
-            print(sentence)
             summary += sentence + " "
     summary = summary.replace('_', ' ').strip()
     return summary
 
-def main():
-    text = input("Enter text: ")
-    print(summarize(text))
+# def main():
+#     text = input("Enter text: ")
+#     print(summarize(text))
 
-main()
+# main()
