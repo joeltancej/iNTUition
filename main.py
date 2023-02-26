@@ -6,8 +6,6 @@ from flask import Flask, render_template, url_for, request, redirect, session, f
 from flask_session import Session
 import requests
 from pdfminer.high_level import extract_text
-# from werkzeug import secure_filename
-# import os, os.path
 from distutils.log import debug
 from fileinput import filename
 from datetime import timedelta
