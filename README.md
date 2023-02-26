@@ -1,3 +1,1 @@
 # iNTUition
-
-## - the winning group -
